@@ -1,5 +1,3 @@
-// person can pick items from a list costing of diiferent coins to redeems it, wubsequent coins will be deducted from the user
-// Currently I have a predefined table with three items with corresponding ids of. The redeemed item will be added to users table to reflect the same
 package functions
 
 import (
@@ -14,6 +12,8 @@ import (
 type redeemCoinsData struct {
 	Item_id int `json:"itemid"`
 }
+
+//Presumption: Three predefined items available for redemption!
 
 func RedeemCoinsFunc(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/redeem" {
